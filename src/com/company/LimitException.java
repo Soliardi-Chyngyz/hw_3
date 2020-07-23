@@ -9,8 +9,6 @@ public class LimitException extends Exception{
         this.remainingAmount = remainingAmount;
     }
 
-    public LimitException(String s) {
-    }
 
     public double getRemainingAmount(){
         return remainingAmount;}

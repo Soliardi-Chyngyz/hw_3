@@ -16,10 +16,10 @@ public class BankAmount extends Exception {
         return amount += sum;
     }
 
-    public void withDraw(int sum) throws LimitException {
+    public void withDraw(int sum) throws Exception{
 
         if (sum > getAmount()) {
-            throw new LimitException("У вас недостаточно средств для вывода денег!");
+            throw new LimitException("У вас недостаточно средств для вывода денег!", amount);
         }
         this.amount-=sum;
     }
